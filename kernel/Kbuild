@@ -1,0 +1,3 @@
+obj-m += telemetry.o
+telemetry-y := telemetry_core.o
+ccflags-y += -I$(src)/../include

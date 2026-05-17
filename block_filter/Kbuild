@@ -1,0 +1,4 @@
+obj-m += block_filter.o
+block_filter-y := telemetry_block.o
+ccflags-y += -I$(src)/../include
+ccflags-y += -I$(src)/../kernel
