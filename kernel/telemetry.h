@@ -1,7 +1,7 @@
 #ifndef TELEMETRY_H
 #define TELEMETRY_H
-
-#include <telemetry_uapi.h>
+#include "net_filter_uapi.h"
+#include "telemetry_uapi.h"
 
 // --- Netfilter telemetry functions ---
 
@@ -24,5 +24,6 @@ int telemetry_net_dev_push_metric(struct net_packet_metric *metric);
 // --- Block device telemetry functions ---
 
 // --- TODO: Memory Management telemetry functions ---
+
 
 #endif

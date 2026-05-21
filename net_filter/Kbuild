@@ -1,4 +1,4 @@
 obj-m += net_filter.o
-net_filter-y := telemetry_net.o
+net_filter-y := net_filter_kernel.o
 ccflags-y += -I$(src)/../include
 ccflags-y += -I$(src)/../kernel

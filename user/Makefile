@@ -9,7 +9,7 @@ all: telemetry_user
 	cp telemetry_user $(BIN_DIR)/
 
 telemetry_user: telemetry_user.c
-	$(CC) $(CFLAGS) -o telemetry_user telemetry_user.c
+	$(CC) $(CFLAGS) -o telemetry_user telemetry_user.c telemetry_client.c net_filter_client.c
 
 clean:
 	rm -f telemetry_user
