@@ -43,7 +43,7 @@ static inline void process_metric(net_payload_slot_t *local_slot) {
 //            &metric->dest_ip, ntohs(metric->dest_port), 
 //             ntohs(metric->pkt_len));
             &metric->src_ip,metric->src_port,
-            &metric->dest_ip, metric->dest_port, 
+            &metric->dest_ip, metric->dest_port,
              metric->pkt_len);
     (void)metric; 
 }

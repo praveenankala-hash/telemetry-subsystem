@@ -6,8 +6,6 @@
 #include "telemetry_uapi.h"
 #include "telemetry_client.h"
 
-#define DEV_PATH_MMAP "/dev/telemetry_mmap"
-
 telemetry_ctx_t *telemetry_initialize(const char *device_path, telemetry_ctx_t *ctx) {
     //telemetry_ctx_t *ctx = malloc(sizeof(telemetry_ctx_t));
     //telemetry_ctx_t *ctx = ctx_ptr;
@@ -17,7 +15,7 @@ telemetry_ctx_t *telemetry_initialize(const char *device_path, telemetry_ctx_t *
     }
 
     // Open the single, unified telemetry char device
-    ctx->fd = open(DEV_PATH_MMAP, O_RDWR);
+    ctx->fd = open(device_path, O_RDWR);
     if (ctx->fd < 0) {
         perror("Failed to open unified telemetry device");
         return NULL;
